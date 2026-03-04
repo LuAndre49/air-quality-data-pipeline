@@ -1,2 +1,2 @@
-# air-quality-data-pipeline
-A data pipeline for Southeast Asia air quality analytics
+# sea-market-pipeline
+A data pipeline for analyzing stock market data from companies listed in Southeast Asian stock exchanges
