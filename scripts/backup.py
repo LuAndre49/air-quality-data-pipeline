@@ -4,10 +4,8 @@ import pandas as pd
 import dlt
 from datetime import datetime, timedelta, timezone
 
-# ── CHANGE THESE ──
 START_DATE = "2024-08-01"
 END_DATE = "2024-08-31"
-# ──────────────────
 
 NOMINATIM_HEADERS = {"User-Agent": "ph-weather-analytics/1.0"}
 NCR = {"province": "Metro Manila (NCR)", "lat": 14.5086, "lon": 121.0197}
