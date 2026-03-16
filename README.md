@@ -13,7 +13,7 @@ This project builds a complete ELT pipeline that:
 **Key analytical questions answered:**
 - Are Philippine provinces getting hotter over the past 10 years?
 - Which provinces are most exposed to typhoon-force winds, extreme rainfall, and dangerous heat?
-- How does weather differ between wet season (June–November) and dry season (December–May)?
+- How does weather differ between wet season (June-November) and dry season (December-May)?
 - What are the monthly rainfall and temperature patterns per province?
 
 ---
@@ -37,8 +37,8 @@ The pipeline follows a typical ELT workflow:
    - Raw table: `raw_ph_weather.weather_daily`
 
 4. **Transformation (dbt)**
-   - `stg_raw_weather_data` – cleaned and typed raw data
-   - `int_monthly` – monthly aggregated metrics
+   - `stg_raw_weather_data` - cleaned and typed raw data
+   - `int_monthly` - monthly aggregated metrics
    - marts layer:
      - `mart_province_climate_summary`
      - `mart_monthly_patterns`
@@ -138,27 +138,27 @@ All thresholds are based on official Philippine and international meteorological
 
 | Column | Threshold | Signal |
 |---|---|---|
-| signal_1_wind_days | 39–61 km/h | Signal #1 |
-| signal_2_wind_days | 62–88 km/h | Signal #2 |
-| signal_3_wind_days | 89–117 km/h | Signal #3 |
-| signal_4_wind_days | 118–184 km/h | Signal #4 |
+| signal_1_wind_days | 39-61 km/h | Signal #1 |
+| signal_2_wind_days | 62-88 km/h | Signal #2 |
+| signal_3_wind_days | 89-117 km/h | Signal #3 |
+| signal_4_wind_days | 118-184 km/h | Signal #4 |
 | signal_5_wind_days | >=185 km/h | Signal #5 |
 
 **Rainfall Hazard Days** - [PAGASA 24-HR Rainfall Advisory](https://www.facebook.com/DOST.PAGASA):
 
 | Column | Threshold | Classification |
 |---|---|---|
-| moderate_to_heavy_rain_days | 50–99 mm/day | Moderate to Heavy |
-| heavy_to_intense_rain_days | 100–199 mm/day | Heavy to Intense |
+| moderate_to_heavy_rain_days | 50-99 mm/day | Moderate to Heavy |
+| heavy_to_intense_rain_days | 100-199 mm/day | Heavy to Intense |
 | intense_to_torrential_rain_days | >=200 mm/day | Intense to Torrential |
 
 **Heat Index Days** - [PAGASA Heat Index](https://www.pagasa.dost.gov.ph/weather/heat-index), computed using the [Rothfusz regression equation (NOAA/NWS, 1990)](https://www.wpc.ncep.noaa.gov/html/heatindex_equation.shtml):
 
 | Column | Threshold | Classification |
 |---|---|---|
-| caution_heat_index_days | 27–32°C | Caution |
-| extreme_caution_heat_index_days | 33–41°C | Extreme Caution |
-| danger_heat_index_days | 42–51°C | Danger |
+| caution_heat_index_days | 27-32°C | Caution |
+| extreme_caution_heat_index_days | 33-41°C | Extreme Caution |
+| danger_heat_index_days | 42-51°C | Danger |
 | extreme_danger_heat_index_days | >=52°C | Extreme Danger |
 
 ---
@@ -257,7 +257,7 @@ In the Kestra UI, go to **Flows** -> **Import** and upload the YAML files from t
 
 ### 3. Running the Backfill
 
-The historical backfill fetches 10+ years of data (2015–present) for all 83 provinces sequentially due to Open-Meteo's free tier rate limits.
+The historical backfill fetches 10+ years of data (2015-present) for all 83 provinces sequentially due to Open-Meteo's free tier rate limits.
 
 **Option A: Run via standalone Python script (recommended)**
 
@@ -276,7 +276,7 @@ export GOOGLE_APPLICATION_CREDENTIALS="/path/to/kestra-service-account-key.json"
 python scripts/backup.py
 ```
 
-Total runtime is approximately 15–20 minutes.
+Total runtime is approximately 15-20 minutes.
 
 **Option B: Run via Kestra UI**
 
