@@ -177,7 +177,7 @@ The Power BI dashboard contains 6 pages:
 | Season Comparison | Wet vs dry season conditions side by side per province |
 
 ### Province Overview
-![Province Overview](/ph-weather-pipeline/screenshots/Province_Overview.png)
+![Province Overview](/screenshots/Province_Overview.png)
 
 ### Province Rankings
 ![Province Rankings](/ph-weather-pipeline/screenshots/Province_Rankings.png)
