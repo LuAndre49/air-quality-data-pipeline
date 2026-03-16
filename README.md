@@ -276,8 +276,6 @@ export GOOGLE_APPLICATION_CREDENTIALS="/path/to/kestra-service-account-key.json"
 python scripts/backup.py
 ```
 
-Total runtime is approximately 15-20 minutes.
-
 **Option B: Run via Kestra UI**
 
 Trigger the `weather_backfill` flow manually from the Kestra UI.
