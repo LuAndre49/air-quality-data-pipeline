@@ -189,7 +189,7 @@ The Power BI dashboard contains 6 pages:
 ![Annual Trends](/screenshots/Annual_Trends.png)
 
 ### Weather Risk Summary
-![Weather Risk Summary](/screenshots/Weather_Risk_summary.png)
+![Weather Risk Summary](/screenshots/Weather_Risk_Summary.png)
 
 ### Season Comparison
 ![Season Comparison](/screenshots/Season_Comparison.png)
